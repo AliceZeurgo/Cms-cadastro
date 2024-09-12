@@ -4,45 +4,52 @@ import flor from "./public/images/nav/logo.png"; // Imagem da Flor
 
 export default function Home() {
   return (
-    <div className="relative max-w-full bg-white p-8 pb-20 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+    <div className="min-h-screen bg-white font-[family-name:var(--font-geist-sans)] flex flex-col">
+      <header className="flex flex-row h-[20%] p-4 items-center">
+        
+        <div className="w-full h-52 flex items-center z-10 gap-5">
+        <Image src={flor} alt="logo" className="w-24 h-16" />
+          <h1 className="font-semibold text-4xl text-gray-400 text-center">Cadastro</h1>
+        </div>
+      </header> 
 
-      {/* Header section */}
-      <header className="relative ">
-        {/* Centering the text horizontally */}
-        <div className="text-center">
-          <h1 className="text-3xl text-slate-400 mb-4">
-            Cadastrar
-          </h1>
-        </div>
-        {/* Positioning the image on the top-left */}
-        <div className="absolute top-0 left-4">
-          <Image src={flor} alt="lotus" width={120} height={120} />
-        </div>
-      </header>
-      
-      {/* Centering the input fields */}
-      <div className="flex items-center justify-center min-h-screen">
-        <div className="w-[600px] space-y-6">
+      <main className="flex-grow flex items-start justify-center p-20">
+        <form className="w-[600px] flex flex-col items-center space-y-6"> {/* Ajuste aqui */}
           <input
             type="text"
-            className="bg-[#FFEBE3] w-full h-[50px] border rounded px-3"
+            className=" border-double border-4 border-[#eebda9] w-full h-[50px] rounded-2xl px-3"
             placeholder="Nome"
+            required
           />
           <input
             type="text"
-            className="bg-[#FFEBE3] w-full h-[50px] border rounded px-3"
+            className="border-double border-4 border-[#eebda9] w-full h-[50px] rounded-2xl px-3"  
             placeholder="Sobrenome"
+            required
           />
           <input
-            type="text"
-            className="bg-[#FFEBE3] w-full h-[50px] border rounded px-3"
+            type="email"
+            className="border-double border-4 border-[#eebda9] w-full h-[50px] rounded-2xl px-3"
             placeholder="E-mail"
+            required
           />
-        </div>
-      </div>
+          <input
+            type="password"
+            className="border-double border-4 border-[#eebda9] w-full h-[50px] rounded-2xl px-3"
+            placeholder="Senha"
+            required
+          />
 
-      {/* Footer section */}
-      <footer className="absolute bottom-4 left-4">
+          <button
+            type="submit"
+            className="bg-[#FFEBE3] w-full max-w-[250px] h-[50px] rounded-2xl mt-6"
+          >
+            Cadastrar
+          </button>
+        </form>
+      </main>
+
+      <footer className="absolute bottom-4">
         <Image src={photo} alt="flor" width={180} height={200} />
       </footer>
     </div>
