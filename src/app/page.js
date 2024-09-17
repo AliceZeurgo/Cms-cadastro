@@ -57,8 +57,8 @@ export default function Home() {
 
       <main className="flex-grow flex items-center justify-center p-4 md:p-20">
         <form onSubmit={handleSubmit} className="w-full max-w-[600px] flex flex-col items-center space-y-6">
-          {errorMessage && <p className="text-red-500">{errorMessage}</p>}
-          {successMessage && <p className="text-green-500">{successMessage}</p>}
+          {errorMessage && <p className="text-blue-700">{errorMessage}</p>}
+          {successMessage && <p className="text-pink-600">{successMessage}</p>}
           <input
             type="text"
             name="nome"
@@ -105,7 +105,7 @@ export default function Home() {
         </form>
       </main>
 
-      <footer className="flex justify-center pb-4">
+      <footer className="flex pb-4">
         <Image src={photo} alt="flor" width={180} height={200} />
       </footer>
     </div>
