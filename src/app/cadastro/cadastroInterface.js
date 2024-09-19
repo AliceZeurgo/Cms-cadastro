@@ -26,7 +26,7 @@ export default function CadastroInterface() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("http://localhost:8080/users", {
+      const response = await fetch("http://localhost:8080/v1/Lotus/cadastro", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -107,7 +107,7 @@ export default function CadastroInterface() {
           </button>
         </form>
 
-        <p className="mt-4 text-center">
+        <p className="mt-4 text-center p-6 text-[13px]">
           Já possui uma conta?
           <button className="text-orange-400 ml-1">Faça login.</button>
         </p>
